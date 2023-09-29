@@ -13,7 +13,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10%;
+    margin-bottom: 13%;
 }
 
 #imgLogo {
@@ -30,12 +30,11 @@ a,a:hover{
 }
 
 .myform-area{
-  overflow: hidden;
   padding: 60px 0;
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -30%);
 }
 
 .myform-area .form-area{
@@ -62,10 +61,13 @@ a,a:hover{
 }
 
 .myform-area .form-area .form-content h2{
-  color: #fff;
+    color: #fff;
+    margin-bottom: 30px;
+    cursor: default;
 }
 .myform-area .form-area .form-content p{
   color: #fff;
+    cursor: default;
 }
 .myform-area .form-area .form-content ul{
   margin-top: 50px;
@@ -189,10 +191,37 @@ a,a:hover{
 #checkbox {
     width: 20px;
     margin-bottom: 15px;
+    cursor: pointer;
 }
 
 #labelCheck {
     pointer-events: none;
-    font-size: 12px;
+    font-size: 11px;
     color: #595959;
+}
+
+footer {
+    position: fixed;
+    margin: 0 auto;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
+}
+
+#footerImgContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+#footerImgContainer img{
+    margin-bottom: 30px;
+    padding: 10px;
+    width: 50px;
+}
+
+#copyright {
+    margin-top: 20px;
 }
