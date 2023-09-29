@@ -1,12 +1,29 @@
+let checkbox = document.getElementById("checkbox")
+
 
 document.getElementById("form").addEventListener("submit", (e) => {
     e.preventDefault()
     let formData = new FormData(form)
     let clientEmail = Object.fromEntries(formData).email
 
-    if(clientEmail !== "") {
-        addClient({email: clientEmail})
+    if(checkbox.checked) {
+        if(clientEmail !== "") {
+            addClient({email: clientEmail})
+        }
+    } else {
+        Toastify({
+            text: "Merci d'accepter les conditions générales",
+            duration: 3000,
+            position: "center",
+            offset: {
+                y: 10
+            },
+            style: {
+                background: "linear-gradient(to right, #ed6767, #ff0000)"
+            }
+        }).showToast()
     }
+
 })
 
 async function addClient(data) {
@@ -47,6 +64,7 @@ async function addClient(data) {
         }).showToast()
 
         document.getElementById("email").value = ""
+        checkbox.checked = false
         return response.json()
 
     } catch(err) {
